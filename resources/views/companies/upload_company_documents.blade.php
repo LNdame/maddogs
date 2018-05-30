@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
     @section('content')
-
+<div class="gtco-container">
         <h2>Upload Files</h2>
         <br>
         <a href="/companies/" class="btn btn-default pull-right">Back</a>
@@ -105,6 +105,6 @@
                 
                 {!! Form::close() !!}
      
-
+</div>
 
     @endsection
