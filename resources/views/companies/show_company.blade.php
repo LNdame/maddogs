@@ -2,6 +2,8 @@
 
     @section('content')
 
+<div class="gtco-container">
+
         <h2>{{$company->company_name}}</h2>
         <br>
        
@@ -88,4 +90,6 @@
                          </select>
                     
             </div>
+
+         </div>   
     @endsection

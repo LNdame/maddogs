@@ -1,33 +1,28 @@
-<div id="app">
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+<nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+                
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <div id="gtco-logo"><a href="index.html"><img src="images/logo.png" alt="Free HTML5 Website Template by GetTemplates.co"></a></div>
+                    </div>
+                    <div class="col-6 col-md-4 text-left menu-1">
+                        <ul>
+                            <li class="active"><a href="{{ url('/home') }}">Home</a></li>
+                            <li><a href="{{url('/about')}}">About</a></li>
+                            <li ><a href="{{url('/services')}}">Services</a> </li>
+                            
+                           <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
+                            <li><a href="{{url('/contact')}}">Contact</a></li>
+                        </ul>
 
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
+                        
+                
+                    </div>
+                    <!-- Right Side Of Navbar -->
+                    <div class="col-6 col-md-4 text-right menu-1">
+                        <ul>
+                            <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ route('login') }}">Login</a></li>
                         <li><a href="{{ route('register') }}">Register</a></li>
@@ -50,16 +45,20 @@
                                     </form>
                                 </li>
                                 <li>
-                                    <a href="/banks/">Manage Banks</a>
+                                    <a href="{{route('banks.index')}}">Manage Banks</a>
                                 </li>
                                 <li>
-                                    <a href="/companies/">Manage Companies</a>
+                                    <a href="{{route('companies.index')}}">Manage Companies</a>
                                 </li>
                                 
                             </ul>
                         </li>
                     @endif
-                </ul>
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
-        </div>
-    </nav>
+        </nav>
+
+

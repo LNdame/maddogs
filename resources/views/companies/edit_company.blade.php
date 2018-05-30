@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
     @section('content')
+<div class="gtco-container">
 
         <h2>Edit Company</h2>
         <br>
@@ -87,5 +88,5 @@
 
             
         {!! Form::close() !!}
-
+</div>
     @endsection

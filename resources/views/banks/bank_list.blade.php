@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
     @section('content')
+    <div class="gtco-container">
+
 
         <h2>List of Registered Banks</h2>
         <br>
@@ -31,5 +33,5 @@
 
         {{$banks->links()}}
 
-
+</div>
         @endsection

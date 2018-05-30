@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
     @section('content')
+    <div class="gtco-container">
+
 
         <h2>Create Bank</h2>
         <br>
@@ -22,5 +24,5 @@
                 
                 {!! Form::close() !!}
         </div>
-
+</div>
     @endsection
