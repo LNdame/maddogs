@@ -64,6 +64,9 @@ class BanksController extends Controller
     public function show($id)
     {
         //
+
+        $banks = Bank::orderBy('bank_name', 'desc')->get();
+         return view('banks.show_bank',['banks'=>$banks]);
     }
 
     /**
@@ -74,7 +77,9 @@ class BanksController extends Controller
      */
     public function edit($id)
     {
-        //
+        $banks = Bank::find($id);
+
+        return view('banks.edit_bank')->with('banks', $banks);
     }
 
     /**
@@ -87,6 +92,18 @@ class BanksController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        $this->validate($request,[
+            'bank_name' => 'required'
+
+        ]);
+
+        $bank = Bank::find($id);
+        $bank->bank_name  = $request->input('bank_name');
+
+        $bank->save();
+
+        return redirect('/banks')->with('success', 'Bank Updated');
     }
 
     /**
