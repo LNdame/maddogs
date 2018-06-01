@@ -57,7 +57,31 @@
                         </ul>
                     </div>
                 </div>
-                
+
+                 @if (!Auth::guest())
+
+                 <div class="row" style="background-color: #333333">
+                     <div class="col text-right menu-1 float-right">
+                         <ul>
+                                
+                            <li><a href="{{route('banks.index')}}">Banks</a></li>
+                            <li><a href="{{route('companies.index')}}">Companies</a></li>
+
+                            <li>
+                                    <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i>
+                                        Logout
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+                 @endif
             </div>
         </nav>
 
