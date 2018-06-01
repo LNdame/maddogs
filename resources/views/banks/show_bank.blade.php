@@ -12,15 +12,14 @@
 
                 {!! Form::open(['action' => 'BanksController@show', 'method' =>'GET']) !!}
 
-                <div class="form-group">
+                <div class="form-group col-md-offset-2 col-md-8">
                         {{Form::label('bank_name', 'Enter the name of the bank')}}
-                        {{Form::text('bank_name',$banks->bank_name,['class'=>'form-control','placeholder'=>'Enter the name of the bank', 'readonly')}}
+                        {{Form::text('bank_name',$banks->bank_name,['class'=>'form-control','placeholder'=>'Enter the name of the bank', 'readonly'])}}
                 </div>
 
                 //{{Form::submit('Save',['class'=>'btn bnt-primary'])}}
-
                 
                 {!! Form::close() !!}
         </div>
 
-    @endsection
+@endsection
