@@ -69,15 +69,12 @@
 
             <div class="form-group col-md-offset-2 col-md-4">
                     {{Form::label('bank_id', 'List of users')}}
-
-                    
                          <select name="registered_by" class="form-control" id="registered_by">
                             <option value="">Select a User</option>
                             @foreach ($users as $user)
                                 <option value="{!!$user->id!!}"> {!!$user->name!!} </option>
                             @endforeach
                          </select>
-                    
             </div>
 
             
