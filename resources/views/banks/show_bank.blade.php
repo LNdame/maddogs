@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-    @section('content')
+    @section('content
+     <div class="container">
 
         <h2>Create Bank</h2>
         <br>
@@ -21,5 +22,7 @@
                 
                 {!! Form::close() !!}
         </div>
+
+    </div>
 
 @endsection

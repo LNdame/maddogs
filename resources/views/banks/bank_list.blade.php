@@ -6,8 +6,8 @@
 
         <h2>List of Registered Banks</h2>
         <br>
-        <a href="/banks/create" class="btn btn-primary pull-right">Add New Bank</a>
-        <a href="/home" class="btn btn-default">Back</a>
+        <a href="{{url('/banks/create')}}" class="btn btn-primary pull-right">Add New Bank</a>
+        <a href="{{url('/home')}}" class="btn btn-default">Back</a>
 
         <br><hr>
 
@@ -43,13 +43,7 @@
         @endforeach
 
         </tbody>
-            <tfoot>
-                <tr>
-                    <th>Name</th>
-                    <th>Actions</th>
-                    
-                </tr>
-            </tfoot>
+           
         </table>
         @endif
 

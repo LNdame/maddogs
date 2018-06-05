@@ -10,7 +10,14 @@
           <h1 class="text-secondary mb-0">Contact Us</h1>
           <h2 class="mb-5">Drop us a line, anytime!</h2>
         </div>
-        <div class="row justify-content-center"></div>
+        <div class="row justify-content-center">
+           <div class="col-sm">South End Port Elizabeth, 6002</div>
+           <div class="col-sm"><abbr title="Email">E</abbr>:
+                  masixole.m@tsenene.co.za</div>
+           <div class="col-sm"><abbr title="Hours">H</abbr>: Mon - Fri: 9:00 to 17:00</div>
+           <div class="col-sm"><abbr title="Phone">P</abbr>: 041 076 9889  </div></div>
+
+        </div>
       </div>
     </section>
 
@@ -59,24 +66,7 @@
       
            
              
-            
-              <!-- Contact Details Column -->
-              <div class="col-md-12">
-                
-                
-                  South End Port Elizabeth, 6002
-               
-                
-              
-              
-                  <abbr title="Email">E</abbr>:
-                  <a href="mailto:name@example.com">masixole.m@tsenene.co.za</a>
-                  
-               
-                  <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
-              
-                <div class="col-md-4"> <abbr title="Phone">P</abbr>: 041 076 9889  </div>
-            <!-- /.row -->
+          
       
 
     
