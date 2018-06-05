@@ -12,33 +12,37 @@
  <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+
+      <!--  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
         <!-- Styles -->
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
+       <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
 
         
         <!-- Theme style  -->
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/product.css') }}" rel="stylesheet">
+ <!-- Custom CSS -->
+    <link href="{{ asset('css/stylish-portfolio.min.css') }}" rel="stylesheet">
 
-        <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/icomoon.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/themify-icons.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
+        
     
     <script src="{{ asset('js/app.js') }}"></script>
 
-        <!-- Modernizr JS -->
-    <script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
+      <script>
+      
+
+    $(document).ready(function() {
+    $('#datatable').DataTable();
+    } );
+
+    </script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
     <script src="js/respond.min.js"></script>
@@ -47,39 +51,46 @@
    
 </head>
 <body>
-     <!--     <div class="gtco-loader"></div> -->
-
-    <div id="page">
-
-        @include('layouts.inc.navbar')
+    <!-- Navbar-->
+     @include('layouts.inc.navbar')
 
         @include('layouts.inc.messages')
 
+    <!-- end Navbar-->
+
+    <!--Content -->
         @yield('content')
+    <!--End Content -->
 
-        @include('layouts.inc.footer')
-       
-        <!-- END .gtco-footer -->
-        </div>
-    <div class="gototop js-top">
-        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-    </div>
+    
+    <!-- footer-->
 
-    <!-- jQuery -->
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <!-- jQuery Easing -->
-    <script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
-    <!-- Bootstrap -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <!-- Waypoints -->
-    <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
-    <!-- Carousel -->
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <!-- Magnific Popup -->
-    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('js/magnific-popup-options.js') }}"></script>
-    <!-- Main -->
-    <script src="{{ asset('js/main.js') }}"></script>
+    @include('layouts.inc.footer')
+    <!-- end footer-->
+
+
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    
+
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+
+ 
+
+
+    
 
 
 

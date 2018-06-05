@@ -3,42 +3,23 @@
 @section('content')
 
 <!-- Content Row -->
-<!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Contact Us
-        <small>Subheading</small>
-      </h1>
-      <div class="row">
-        <!-- Map Column -->
-        <div class="col-lg-8 mb-4">
-          <!-- Embedded Google Map -->
-          <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
-        </div>
-        <!-- Contact Details Column -->
-        <div class="col-lg-4 mb-4">
-          <h3>Contact Details</h3>
-          <p>
-            3481 Melrose Place
-            <br>Beverly Hills, CA 90210
-            <br>
-          </p>
-          <p>
-            <abbr title="Phone">P</abbr>: (123) 456-7890
-          </p>
-          <p>
-            <abbr title="Email">E</abbr>:
-            <a href="mailto:name@example.com">name@example.com
-            </a>
-          </p>
-          <p>
-            <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
-          </p>
-        </div>
-      </div>
-      <!-- /.row -->
 
+ <section class="content-section bg-primary text-white text-center" id="services">
+      <div class="container">
+        <div class="content-section-heading">
+          <h1 class="text-secondary mb-0">Contact Us</h1>
+          <h2 class="mb-5">Drop us a line, anytime!</h2>
+        </div>
+        <div class="row justify-content-center"></div>
+      </div>
+    </section>
+
+<!-- Page Heading/Breadcrumbs -->
+      
+      
       <!-- Contact Form -->
       <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-lg-8 mb-4">
           <h3>Send us a Message</h3>
           <form name="sentMessage" id="contactForm" novalidate>
@@ -75,9 +56,39 @@
 
       </div>
       <!-- /.row -->
+      
+           
+             
+            
+              <!-- Contact Details Column -->
+              <div class="col-md-12">
+                
+                
+                  South End Port Elizabeth, 6002
+               
+                
+              
+              
+                  <abbr title="Email">E</abbr>:
+                  <a href="mailto:name@example.com">masixole.m@tsenene.co.za</a>
+                  
+               
+                  <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
+              
+                <div class="col-md-4"> <abbr title="Phone">P</abbr>: 041 076 9889  </div>
+            <!-- /.row -->
+      
 
-    </div>
+    
+
     <!-- /.container -->
-
+ <!-- Map -->
+    <section id="contact" class="map">
+      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+      <br/>
+      <small>
+        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+      </small>
+    </section>
 
 @endsection

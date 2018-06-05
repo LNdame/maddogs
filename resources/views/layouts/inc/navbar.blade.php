@@ -1,74 +1,48 @@
 
-<nav class="gtco-nav" role="navigation">
-            <div class="gtco-container">
+<nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        
+            
+                <a class="py-2" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+                </a>
+                <a class="py-2 d-none d-md-inline-block" href="{{ url('/') }}">Home</a>
+                <a class="py-2 d-none d-md-inline-block" href="{{url('/about')}}">About</a>
+                <a class="py-2 d-none d-md-inline-block" href="{{url('/services')}}">Services</a>
+                <a class="py-2 d-none d-md-inline-block" href="{{url('/contact')}}">Contact</a>
                 
-                <div class="row">
-                    <div class="col-6 col-md-4">
-                        <div id="gtco-logo"><a href="index.html"><img src="images/logo.png" alt="Free HTML5 Website Template by GetTemplates.co"></a></div>
-                    </div>
-                    <div class="col-6 col-md-4 text-left menu-1">
-                        <ul>
-                            <li class="active"><a href="{{ url('/home') }}">Home</a></li>
-                            <li><a href="{{url('/about')}}">About</a></li>
-                            <li ><a href="{{url('/services')}}">Services</a> </li>
-                            
-                           <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
-                            <li><a href="{{url('/contact')}}">Contact</a></li>
-                        </ul>
+             
 
+             <!-- Right Side Of Navbar -->
+                    
                         
-                
-                    </div>
-                    <!-- Right Side Of Navbar -->
-                    <div class="col-6 col-md-4 text-right menu-1">
-                        <ul>
                             <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Register</a></li>
+                        <a class="py-2 d-none d-md-inline-block"  href="{{ route('login') }}">Login</a>
+                        <a class="py-2 d-none d-md-inline-block" href="{{ route('register') }}">Register</a>
                     @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        
+                            <a class="py-2 d-none d-md-inline-block"  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                                <li>
-                                    <a href="{{route('banks.index')}}">Manage Banks</a>
-                                </li>
-                                <li>
-                                    <a href="{{route('companies.index')}}">Manage Companies</a>
-                                </li>
-                                
-                            </ul>
-                        </li>
+                            
+                        
                     @endif
-                        </ul>
-                    </div>
-                </div>
-
-                 @if (!Auth::guest())
+                      
+                    
+         
+            @if (!Auth::guest())
 
                  <div class="row" style="background-color: #333333">
                      <div class="col text-right menu-1 float-right">
-                         <ul>
+                         
                                 
-                            <li><a href="{{route('banks.index')}}">Banks</a></li>
-                            <li><a href="{{route('companies.index')}}">Companies</a></li>
+                            <a class="py-2 d-none d-md-inline-block" href="{{route('banks.index')}}">Banks</a></li>
+                            <a class="py-2 d-none d-md-inline-block" href="{{route('companies.index')}}">Companies</a></li>
 
-                            <li>
-                                    <a href="{{ route('logout') }}"
+                            
+                                    <a class="py-2 d-none d-md-inline-block" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i>
                                         Logout
@@ -77,12 +51,16 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                     </form>
-                                </li>
-                        </ul>
+                                
                     </div>
                 </div>
                  @endif
-            </div>
-        </nav>
+
+      </div>
+    </nav>
+
+
+
+
 
 

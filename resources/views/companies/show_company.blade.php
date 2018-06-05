@@ -2,7 +2,7 @@
 
     @section('content')
 
-<div class="gtco-container">
+<div class="container">
 
         <h2>{{$company->company_name}}</h2>
         <br>

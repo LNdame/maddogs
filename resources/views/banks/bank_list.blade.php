@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
     @section('content')
-    <div class="gtco-container">
+    <div class="container">
 
 
         <h2>List of Registered Banks</h2>
@@ -11,24 +11,46 @@
 
         <br><hr>
 
+
+
         @if(count($banks)>0)
 
+
+        <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Actions</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+
         @foreach($banks as $bank)
-        
-        <div class="row">
-            <div class="col-md-8">
-                <h3>{{$bank->bank_name}}</h3>
-            </div>
-            
-            <div class="col-md-4">
-                <a href="/banks/{{$bank->id}}" class="btn btn-success">View</a>
+
+            <tr>
+                <td> <h4>{{$bank->bank_name}}</h4></td>
+                <td>
+                    <a href="/banks/{{$bank->id}}" class="btn btn-success">View</a>
                 <a href="/banks/{{$bank->id}}/edit" class="btn btn-warning">Edit</a>
                 <a href="/" class="btn btn-danger">Delete</a>
-            </div>
-        </div><hr>
+            </td>
+                
+            </tr>
+        
+        
             
         @endforeach
 
+        </tbody>
+            <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Actions</th>
+                    
+                </tr>
+            </tfoot>
+        </table>
         @endif
 
         {{$banks->links()}}

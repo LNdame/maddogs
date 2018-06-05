@@ -1,56 +1,46 @@
- <footer id="gtco-footer" class="gtco-section" role="contentinfo">
-            <div class="gtco-container">
-                <div class="row row-pb-md">
-                    <div class="col-md-8 col-md-offset-2 gtco-cta text-center">
-                        <h3>We Love To Talk About Your Business</h3>
-                        <p><a href="#" class="btn btn-white btn-outline">Contact Us</a></p>
-                    </div>
-                </div>
-                <div class="row row-pb-md">
-                    <div class="col-md-4 gtco-widget gtco-footer-paragraph">
-                        <h3>Cube</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod.</p>
-                    </div>
-                    <div class="col-md-4 gtco-footer-link">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="gtco-list-link">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Features</a></li>
-                                    <li><a href="#">Products</a></li>
-                                    <li><a href="#">Testimonial</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <p>
-                                    <a href="tel://1234567890">+1 234 4565 2342</a> <br>
-                                    <a href="#">info@domain.com</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 gtco-footer-subscribe">
-                        <form class="form-inline">
-                          <div class="form-group">
-                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                            <input type="email" class="form-control" id="" placeholder="Email">
-                          </div>
-                          <button type="submit" class="btn btn-primary">Send</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="gtco-copyright">
-                <div class="gtco-container">
-                    <div class="row">
-                        <div class="col-md-6 text-left">
-                            <p><small>&copy; 2016 Free HTML5. All Rights Reserved. </small></p>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <p><small>Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://pixeden.com/" target="_blank">Pixeden</a> &amp; <a href="http://unsplash.com" target="_blank">Unsplash</a></small> </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+ <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+          <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Cool stuff</a></li>
+            <li><a class="text-muted" href="#">Random feature</a></li>
+            <li><a class="text-muted" href="#">Team feature</a></li>
+            <li><a class="text-muted" href="#">Stuff for developers</a></li>
+            <li><a class="text-muted" href="#">Another one</a></li>
+            <li><a class="text-muted" href="#">Last time</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Resource</a></li>
+            <li><a class="text-muted" href="#">Resource name</a></li>
+            <li><a class="text-muted" href="#">Another resource</a></li>
+            <li><a class="text-muted" href="#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Business</a></li>
+            <li><a class="text-muted" href="#">Education</a></li>
+            <li><a class="text-muted" href="#">Government</a></li>
+            <li><a class="text-muted" href="#">Gaming</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Team</a></li>
+            <li><a class="text-muted" href="#">Locations</a></li>
+            <li><a class="text-muted" href="#">Privacy</a></li>
+            <li><a class="text-muted" href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>

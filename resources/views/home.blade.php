@@ -1,11 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+
+
+
+<!-- Callout -->
+    <section class="callout">
+      <div class="container text-center">
+        <div class="panel panel-default">
+                
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -16,8 +19,15 @@
 
                     You are logged in!
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+        <h2 class="mx-auto mb-5">Welcome to
+          <em>your</em>
+          Dashboard</h2>
+
+          <h3 class="mx-auto mb-5">Start by creating a new company </h3>
+        <a class="btn btn-primary btn-xl" href="{{url('companies/create')}}">Create New Company</a>
+      </div>
+    </section>
+
+    
+
 @endsection

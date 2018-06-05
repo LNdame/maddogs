@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
     @section('content')
-<div class="gtco-container">
+<div class="container">
 
         <h2>Edit Company</h2>
         <br>
