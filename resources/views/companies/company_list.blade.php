@@ -4,7 +4,7 @@
 <div class="container">
         <h2>List of registered companies</h2>
         <br>
-        <a href="{{route('companies.create')}}}" class="btn btn-primary pull-right">Add New Company</a>
+        <a href="{{route('companies.create')}}" class="btn btn-primary pull-right">Add New Company</a>
         <a href="{{url('/home')}}" class="btn btn-default">Back</a>
         <br><hr>
 

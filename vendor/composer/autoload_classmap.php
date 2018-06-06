@@ -51,6 +51,7 @@ return array(
     'CreateAssessmentsTable' => $baseDir . '/database/migrations/2018_05_21_130152_create_assessments_table.php',
     'CreateBanksTable' => $baseDir . '/database/migrations/2018_05_21_130000_create_banks_table.php',
     'CreateCompaniesTable' => $baseDir . '/database/migrations/2018_05_21_133331_create_companies_table.php',
+    'CreateIndustryTable' => $baseDir . '/database/migrations/2018_06_05_140728_create_industry_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'Cron\\AbstractField' => $vendorDir . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
