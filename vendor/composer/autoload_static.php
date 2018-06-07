@@ -372,6 +372,7 @@ class ComposerStaticInitd7706bd60dafceff7ed9ec8bf596eabe
         'CreateAssessmentsTable' => __DIR__ . '/../..' . '/database/migrations/2018_05_21_130152_create_assessments_table.php',
         'CreateBanksTable' => __DIR__ . '/../..' . '/database/migrations/2018_05_21_130000_create_banks_table.php',
         'CreateCompaniesTable' => __DIR__ . '/../..' . '/database/migrations/2018_05_21_133331_create_companies_table.php',
+        'CreateIndustryTable' => __DIR__ . '/../..' . '/database/migrations/2018_06_05_140728_create_industry_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
