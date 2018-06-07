@@ -4,7 +4,7 @@
 <div class="container">
         <h2>List of registered companies</h2>
         <br>
-        <a href="{{route('companies.create')}}}" class="btn btn-primary pull-right">Add New Company</a>
+        <a href="{{route('companies.create')}}" class="btn btn-primary pull-right">Add New Company</a>
         <a href="{{url('/home')}}" class="btn btn-default">Back</a>
         <br><hr>
 
@@ -32,7 +32,7 @@
                 <td> <h5>{{$company->registration_number}}</h5> </td>
                 <td><a href="/companies/{{$company->id}}/upload" class="btn btn-special btn-sm">Upload Documents</a> </td>
                 <td>
-                    <a href="/companies/{{$company->id}}" class="btn btn-success btn-sm">View</a>
+                    <a href="{{route('companies.show',['id'])}}" class="btn btn-success btn-sm">View</a>
                     <a href="/companies/{{$company->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
                     <a href="/" class="btn btn-danger btn-sm">Delete</a>
                 </td>

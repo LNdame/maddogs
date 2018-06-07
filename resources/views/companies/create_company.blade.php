@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
     @section('content')
-    <div class="container">
+    <div class="container" style="padding-bottom: 50px; padding-top: 30px">
 
         <h2>Create Company</h2>
         <br>
@@ -56,7 +56,7 @@
 
                 <div class="form-group col-md-offset-1 col-md-10">
                         {{Form::label('activity_description', 'Activity description')}}
-                        {{Form::textarea('activity_description','',['id'=>'article-ckeditor1','class'=>'form-control','placeholder'=>'Activity description'])}}
+                        {{Form::textarea('activity_description','',['id'=>'article-ckeditor1','class'=>'form-control','placeholder'=>'Activity Description'])}}
                 </div>
 
                 <div class="form-group col-md-offset-2 col-md-8">
@@ -82,7 +82,7 @@
                         
                 </div>
 
-                {{Form::submit('Submit',['class'=>'btn bnt-primary col-md-offset-4 col-md-4'])}}
+                {{Form::submit('Submit',['class'=>'btn btn-xl btn-dark col-md-offset-4 col-md-4'])}}
 
                 
                 {!! Form::close() !!}

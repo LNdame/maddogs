@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
     @section('content')
-<div class="container">
+<div class="container" style="padding-bottom: 50px; padding-top: 30px">
 
         <h2>Edit Company</h2>
         <br>
@@ -81,7 +81,7 @@
             {!! Form::hidden('_method', 'PUT') !!}
             
 
-            {{Form::submit('Submit',['class'=>'btn bnt-primary col-md-offset-4 col-md-4'])}}
+            {{Form::submit('Submit',['class'=>'btn btn-xl btn-dark  col-md-offset-4 col-md-4'])}}
 
             
         {!! Form::close() !!}

@@ -36,14 +36,18 @@
            <link href="{{ asset('vendor/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet" type="text/css">
   
     
-    <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+
+        
+        
+
 
       <script>
-      
-
-    $(document).ready(function() {
-    $('#datatable').DataTable();
-    } );
+       
+       // $('article-ckeditor').ckeditor();
+        $(document).ready(function() {
+        $('#datatable').DataTable();
+            } );
 
     </script>
     <!-- FOR IE9 below -->
@@ -90,10 +94,16 @@
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
 
 
+ <script src="{{asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
+ <script src="{{asset('vendor/unisharp/laravel-ckeditor/adapters/jquery.js')}}"></script>
+ <script type="text/javascript">
+     CKEDITOR.replace('article-ckeditor');
+ </script>
  
-
-
-    
+    <script type="text/javascript">
+     CKEDITOR.replace('article-ckeditor1');
+ </script>
+ 
 
 
 
