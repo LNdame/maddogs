@@ -16,8 +16,8 @@
             <tr>
                 <th>Name</th>
                  <th>Primary Contact</th>
-                  <th>Registration Number</th>
-                  <th>Add Documentation</th>
+                  <th>Registration</th>
+                  <th>Upload</th>
                 <th>Actions</th>
                 
             </tr>
@@ -27,18 +27,32 @@
         @foreach($companies as $company)
         
         <tr>
-                <td> <h4>{{$company->company_name}}</h4></td>
-                <td> <h5>{{$company->primary_contact_email}}</h5> </td>
-                <td> <h5>{{$company->registration_number}}</h5> </td>
-                <td><a href="/companies/{{$company->id}}/upload" class="btn btn-special btn-sm">Upload Documents</a> </td>
-                <td>
-                    <a href="{{route('companies.show',['id'])}}" class="btn btn-success btn-sm">View</a>
-                    <a href="/companies/{{$company->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
-                    <a href="/" class="btn btn-danger btn-sm">Delete</a>
+                <td class="col-md-3"> {{$company->company_name}}</td>
+                <td class="col-md-3"> {{$company->primary_contact_email}} </td>
+                <td class="col-md-2"> {{$company->registration_number}} </td>
+                <td class="col-md-1"><span class="btn-group-sm btn-group-vertical"> <a href="/companies/{{$company->id}}/upload" class="btn btn-info">Upload</a>
+                    <a href="/companies/{{$company->id}}/upload" class="btn btn-info">Checklist</a> </span>
+                
+                </td>
+                <td class="col-md-3"><span class="btn-group-sm">
+                    <a href="/companies/{{$company->id}}" class="btn btn-success">View</a>
+                    <a href="/companies/{{$company->id}}/edit" class="btn btn-warning">Edit</a>
+                   
+
+                    {!!Form::open(['action' => ['BanksController@destroy', $company->id], 'method' =>'POST'])!!}
+                        
+                        {!! Form::hidden('_method', 'DELETE') !!}
+                        
+                        {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
+                        
+                    {!! Form::close() !!}
+
+                </span>
+                    
                 </td>
                 
             </tr>
-       
+
             
         @endforeach
         </tbody>

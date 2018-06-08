@@ -29,12 +29,20 @@
         @foreach($banks as $bank)
 
             <tr>
-                <td> <h4>{{$bank->bank_name}}</h4></td>
-                <td>
-                    <a href="/banks/{{$bank->id}}" class="btn btn-success">View</a>
-                <a href="/banks/{{$bank->id}}/edit" class="btn btn-warning">Edit</a>
-                <a href="/" class="btn btn-danger">Delete</a>
-            </td>
+                <td class="col-md-9"> {{$bank->bank_name}}</td>
+                <td class="col-md-3">
+                    <a href="/banks/{{$bank->id}}" class="btn btn-success btn-sm">View</a>
+                    <a href="/banks/{{$bank->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+           
+                    {!!Form::open(['action' => ['BanksController@destroy', $bank->id], 'method' =>'POST' ,'class'=>'pull-right'])!!}
+                            
+                            {!! Form::hidden('_method', 'DELETE') !!}
+                            
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
+                    
+                    {!! Form::close() !!}
+
+                </td>
                 
             </tr>
         

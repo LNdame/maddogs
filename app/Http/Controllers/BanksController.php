@@ -66,7 +66,7 @@ class BanksController extends Controller
         //
 
         $banks = Bank::orderBy('bank_name', 'desc')->get();
-         return view('banks.show_bank',['banks'=>$banks]);
+         return view('banks.show_bank',['banks'=> $banks]);
     }
 
     /**
@@ -79,7 +79,7 @@ class BanksController extends Controller
     {
         $banks = Bank::find($id);
 
-        return view('banks.edit_bank')->with('banks', $banks);
+        return view('banks.edit_bank')->with('banks', $bank);
     }
 
     /**
@@ -114,6 +114,9 @@ class BanksController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $bank = Bank::find($id);
+        $bank->delete();
+
+        return redirect('/banks')->with('success', 'Bank Deleted');
     }
 }
