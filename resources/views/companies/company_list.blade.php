@@ -30,30 +30,26 @@
                 <td class="col-md-3"> {{$company->company_name}}</td>
                 <td class="col-md-3"> {{$company->primary_contact_email}} </td>
                 <td class="col-md-2"> {{$company->registration_number}} </td>
-                <td class="col-md-1"><span class="btn-group-sm btn-group-vertical"> <a href="/companies/{{$company->id}}/upload" class="btn btn-info">Upload</a>
-                    <a href="/companies/{{$company->id}}/upload" class="btn btn-info">Checklist</a> </span>
-                
+                <td class="col-md-1">
+                    <span class="btn-group-sm btn-group-vertical">
+                        <a href="{{route('uploads.create')}}" class="btn btn-info">Upload</a>
+                        <a href="{{route('tracking.create')}}" class="btn btn-info">Tracking</a>
+                    </span>
                 </td>
-                <td class="col-md-3"><span class="btn-group-sm">
-                    <a href="/companies/{{$company->id}}" class="btn btn-success">View</a>
-                    <a href="/companies/{{$company->id}}/edit" class="btn btn-warning">Edit</a>
-                   
 
-                    {!!Form::open(['action' => ['BanksController@destroy', $company->id], 'method' =>'POST'])!!}
-                        
-                        {!! Form::hidden('_method', 'DELETE') !!}
-                        
-                        {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
-                        
-                    {!! Form::close() !!}
-
-                </span>
+                <td class="col-md-3">
+                    <span class="btn-group-sm">
+                        <a href="/companies/{{$company->id}}" class="btn btn-success">View</a>
+                        <a href="/companies/{{$company->id}}/edit" class="btn btn-warning">Edit</a>
+                            {!!Form::open(['action' => ['BanksController@destroy', $company->id], 'method' =>'POST'])!!} 
+                                {!! Form::hidden('_method', 'DELETE') !!}
+                                {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
+                            {!! Form::close() !!}
+                    </span>
                     
-                </td>
-                
-            </tr>
-
-            
+                </td>  
+        </tr>
+    
         @endforeach
         </tbody>
            

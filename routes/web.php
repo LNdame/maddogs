@@ -29,10 +29,12 @@ Route::get('/services', 'PagesController@services');
 Route::get('/contact', 'PagesController@contact');
 Route::resource('companies', 'CompaniesController');
 Route::resource('banks', 'BanksController');
-Route::get('/companies/{company}/upload', 'CompaniesController@upload');
+//Route::get('/companies/{company}/upload', 'CompaniesController@upload');
+//Route::get('/uploads/{company}/create', 'UploadsController@create');
+//Route::get('/uploads/{company}/store', 'UploadsController@store');
+//Route::get('/companies/{company}/tracking_save', 'CompaniesController@tracking_save');
 Route::resource('uploads', 'UploadsController');
-
-
+Route::resource('tracking', 'TrackingController');
 
 
 Auth::routes();

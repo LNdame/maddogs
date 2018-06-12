@@ -15,20 +15,20 @@ class CreateCompaniesTable extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('company_name');
-            $table->string('registration_number');
-            $table->string('website_url');
-            $table->string('industry');
-            $table->enum('has_bank_account', ['Yes','No']);
+            $table->string('company_name')->nullable();
+            $table->string('registration_number')->nullable();
+            $table->string('website_url')->nullable();
+            $table->string('industry')->nullable();
+            $table->enum('has_bank_account', ['Yes','No'])->nullable();
             $table->integer('bank_id')->unsigned();
-            $table->longtext('mission_statement');
-            $table->longtext('activity_description');
-            $table->integer('primary_contact_number');
+            $table->longtext('mission_statement')->nullable();
+            $table->longtext('activity_description')->nullable();
+            $table->integer('primary_contact_number')->nullable();
             $table->string('primary_contact_email')->unique();
-            $table->integer('registered_by')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('registered_by')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('bank_id')->references('id')->on('banks');
         });
     }

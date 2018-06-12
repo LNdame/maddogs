@@ -11,6 +11,11 @@ use App\User;
 
 class CompaniesController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -18,9 +23,10 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        //
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
         $companies = Company::orderBy('company_name', 'asc')->paginate(5);
-        return view('companies.company_list')->with('companies', $companies);
+        return view('companies.company_list',['companies'=> $companies]);
     }
 
     /**
@@ -68,11 +74,11 @@ class CompaniesController extends Controller
         $company->activity_description = $request->input('activity_description');
         $company->primary_contact_number = $request->input('primary_contact_number');
         $company->primary_contact_email = $request->input('primary_contact_email');
-        $company->registered_by = $request->get('registered_by');
+        $company->user_id = auth()->user()->id;
  
         $company->save();
 
-        return redirect('/company_list')->with('success', 'Company Created');
+        return redirect('companies.company_list')->with('success', 'Company Created');
 
     }
 
@@ -139,7 +145,8 @@ class CompaniesController extends Controller
         $company->activity_description = $request->input('activity_description');
         $company->primary_contact_number = $request->input('primary_contact_number');
         $company->primary_contact_email = $request->input('primary_contact_email');
-        $company->registered_by = $request->get('registered_by');
+        $company->user_id = auth()->user()->id;
+
  
         $company->save();
 
@@ -168,4 +175,50 @@ class CompaniesController extends Controller
         $users = User::orderBy('name', 'desc')->get();
         return view('companies.upload_company_documents',['users'=>$users, 'banks'=>$banks]);
     }
+
+   /* public function tracking_create($id)
+
+    {
+        $company = Company::find($id);
+        $users = User::orderBy('name', 'desc')->get();
+        $banks = Bank::orderBy('bank_name', 'desc')->get();
+
+        return view('tracking.create_tracking', ['company'=>$company, 'banks'=>$banks, 'users'=>$users]);
+    }
+
+    public function tracking_save($id)
+    {
+
+        $company = Company::find($id);
+        $tracking = new Tracking;
+        $tracking->company_id = $company()->id;
+        $tracking->business_product_understandable  = $request->input('business_product_understandable');
+        $tracking->business_product_understandable_detail = $request->input('business_product_understandable_detail');
+        $tracking->strategy_executable = $request->input('strategy_executable');
+        $tracking->strategy_executable_detail = $request->input('strategy_executable_detail');
+        $tracking->outstanding_founders = $request->input('outstanding_founders');
+        $tracking->outstanding_founders_detail = $request->input('outstanding_founders_detail');
+        $tracking->bbbee_requirements = $request->input('bbbee_requirements');
+        $tracking->bbbee_requirements_detail = $request->input('bbbee_requirements_detail');
+        $tracking->project_background = $request->input('project_background');
+        $tracking->institutional_imperative = $request->input('institutional_imperative');
+        $tracking->technical_exellency = $request->input('technical_exellency');
+        $tracking->efficiency_effectiveness = $request->input('efficiency_effectiveness');
+        $tracking->strategy_execution_speed = $request->input('strategy_execution_speed');
+        $tracking->optimization_framework = $request->input('optimization_framework');
+        $tracking->operational_excellency_activities = $request->input('operational_excellency_activities');
+        $tracking->market_feasibility = $request->input('market_feasibility');
+        $tracking->fund_effectiveness = $request->input('fund_effectiveness');
+        $tracking->allocation_efficiency = $request->input('allocation_efficiency');
+        $tracking->positive_growth = $request->input('positive_growth');
+        $tracking->gdp_contribution = $request->input('gdp_contribution');
+        $tracking->business_profitable = $request->input('business_profitable');
+        $tracking->sound_allocation = $request->input('sound_allocation');
+        $tracking->findings = $request->input('findings');
+        $tracking->assessed_by = auth()->user()->id;
+
+        $tracking->save();
+
+        return redirect('companies.company_list',['company'=>$company,'banks'=>$banks, 'users'=>$users, 'success'=>'Captured Successfully']);
+    }*/
 }

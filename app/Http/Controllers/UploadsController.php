@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Upload;
 use App\User;
+use App\Bank;
+use App\Company;
 
 class UploadsController extends Controller
 {
@@ -26,10 +28,11 @@ class UploadsController extends Controller
     public function create()
     {
         //
-
+        //$request->route('id');
+        $banks = Bank::orderBy('bank_name', 'desc')->get();
         $users = User::orderBy('name', 'desc')->get();
 
-        return view('uploads.create_upload',['users'=>$users]);
+        return view('uploads.upload_company_documents',['users'=>$users, 'banks'=>$banks]);
     }
 
     /**
@@ -40,7 +43,7 @@ class UploadsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
