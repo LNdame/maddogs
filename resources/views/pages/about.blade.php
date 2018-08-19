@@ -7,7 +7,7 @@
       <!-- Image Header -->
       <img class="img-fluid rounded mb-4" src="images/about.jpeg" alt="about"  style="width:100%;">
 
-       <h1 class="mb-1 text-white centered ">About Us <br/> Get to know us a little more</h1>
+       <h1 class="mb-1 text-white centered ">About Us <br/> <em> Get to know us a little more </em> </h1>
  
     
 </div>
