@@ -39,6 +39,7 @@
 					Administration
 				  </button>
 				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					 <a class="dropdown-item" href="{{route('home')}}">Dashboard</a> 
 					<a class="dropdown-item" href="{{route('banks.index')}}">Banks</a>
 					<a class="dropdown-item" href="{{route('companies.index')}}">Companies</a>
 					<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
