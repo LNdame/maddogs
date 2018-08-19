@@ -23,14 +23,19 @@
           <h2 class="display-5">Adding Value to</h2>
           <p class="lead">SMME's, Entrepreneurs, and the Local Economy.</p>
         </div>
-        <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+        <div class="bg-dark box-shadow mx-auto" style="  width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+          <img class="card-img-top img-responsive img-responsive" src="images/value.jpg" alt="value">
+
+        </div>
       </div>
       <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
         <div class="my-3 py-3">
           <h2 class="display-5">Your Partner</h2>
           <p class="lead">Entrepreneurship is daunting...if you are alone! </p>
         </div>
-        <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+        <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+          <img class="card-img-top img-responsive img-responsive" src="images/partner.jpg" alt="partner">
+        </div>
       </div>
     </div>
 
