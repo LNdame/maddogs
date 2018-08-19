@@ -19,12 +19,10 @@
 
                     You are logged in!
                 </div>
-        <h2 class="mx-auto mb-5">Welcome to
-          <em>your</em>
-          Dashboard</h2>
-
-          <h3 class="mx-auto mb-5">Start by creating a new company </h3>
-        <a class="btn btn-primary btn-xl" href="{{url('companies/create')}}">Create New Company</a>
+        <h2 class="mx-auto mb-10">Welcome to the Tsenene Capital Dashboard</h2><br>
+        
+          <h3 class="mx-auto mb-5"><em>If you haven't already, start by creating your copany profile</em></h3>
+        <a class="btn btn-primary btn-xl" href="{{url('companies/create')}}">Create Company Profile</a>
       </div>
     </section>
 

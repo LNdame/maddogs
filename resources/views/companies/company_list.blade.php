@@ -11,49 +11,69 @@
 
     @if(count($companies)>0)
            
-        <table id="datatable" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                 <th>Primary Contact</th>
-                  <th>Registration</th>
-                  <th>Upload</th>
-                <th>Actions</th>
-                
-            </tr>
-        </thead>
-        <tbody>
-        
-        @foreach($companies as $company)
-        
-        <tr>
-                <td class="col-md-3"> {{$company->company_name}}</td>
-                <td class="col-md-3"> {{$company->primary_contact_email}} </td>
-                <td class="col-md-2"> {{$company->registration_number}} </td>
-                <td class="col-md-1">
-                    <span class="btn-group-sm btn-group-vertical">
-                        <a href="{{route('uploads.create')}}" class="btn btn-info">Upload</a>
-                        <a href="{{route('tracking.create')}}" class="btn btn-info">Tracking</a>
-                    </span>
-                </td>
 
-                <td class="col-md-3">
-                    <span class="btn-group-sm">
-                        <a href="/companies/{{$company->id}}" class="btn btn-success">View</a>
-                        <a href="/companies/{{$company->id}}/edit" class="btn btn-warning">Edit</a>
-                            {!!Form::open(['action' => ['BanksController@destroy', $company->id], 'method' =>'POST'])!!} 
+			
+		<div class="row">
+			<div class="col-md-3">
+				<h4>Name</h4>
+			</div>
+			<div class="col-md-3">
+				<h4>Contact</h4>
+			</div>
+			<div class="col-md-2">
+				<h4>Reg No.</h4>
+			</div>
+			<div class="col-md-2">
+				<h4>Submissions</h4>
+			</div>
+			<div class="col-md-2">
+				<h4>Actions</h4>
+			</div>
+		</div><hr>
+		
+		@foreach($companies as $company)
+        
+        <div class="row">
+        
+        
+
+				<div class="col-md-3">
+				{{$company->company_name}}
+				</div>
+				<div class="col-md-3">
+				<p>{{$company->primary_contact_email}}</p>
+				</div>
+				<div class="col-md-2">
+				<p>{{$company->registration_number}}</p>
+				</div>
+				<div class="col-md-2">
+					<div class="row">
+						<a class="text-center" href="{{route('uploads.create')}}">Upload</a>
+					</div><br>
+					<div class="row">
+						<a class="text-center"href="{{route('tracking.create')}}">Tracking</a>
+					</div>
+				</div>
+				<div class="col-md-2">
+
+                        <div class="row">
+							<a class="text-center"href="/companies/{{$company->id}}">View</a>
+						</div><br>
+                        <div class="row">
+							<a class="text-center"href="/companies/{{$company->id}}/edit">Edit</a>
+                        </div><br>
+                        
+                        <div class="row">
+                            {!!Form::open(['action' => ['CompaniesController@destroy', $company->id], 'method' =>'POST'])!!} 
                                 {!! Form::hidden('_method', 'DELETE') !!}
-                                {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
+                                {!! Form::submit('Delete',['class' => 'text-center']) !!}
                             {!! Form::close() !!}
-                    </span>
-                    
-                </td>  
-        </tr>
-    
-        @endforeach
-        </tbody>
-           
-        </table>
+						</div>
+		
+				</div>
+		</div>
+		<hr>
+	@endforeach
 
         {{$companies->links()}}
         

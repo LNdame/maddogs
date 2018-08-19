@@ -78,7 +78,7 @@ class CompaniesController extends Controller
  
         $company->save();
 
-        return redirect('companies.company_list')->with('success', 'Company Created');
+        return redirect('/companies')->with('success', 'Company Created');
 
     }
 

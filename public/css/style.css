@@ -46,6 +46,10 @@ body {
   content: "";
 }
 
+.text-center{
+	text-align:center;
+}
+
 a {
   color: #17B794;
   -webkit-transition: 0.5s;

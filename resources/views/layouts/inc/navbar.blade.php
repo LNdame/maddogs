@@ -34,16 +34,14 @@
          
             @if (!Auth::guest())
 
-                 <div class="row" style="background-color: #333333">
-                     <div class="col text-right menu-1 float-right">
-                         
-                                
-                            <a class="py-2 d-none d-md-inline-block" href="{{route('banks.index')}}">Banks</a></li>
-                            <a class="py-2 d-none d-md-inline-block" href="{{route('companies.index')}}">Companies</a></li>
-
-                            
-                                    <a class="py-2 d-none d-md-inline-block" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
+                 <div class="dropdown float-right">
+				  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Administration
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="{{route('banks.index')}}">Banks</a>
+					<a class="dropdown-item" href="{{route('companies.index')}}">Companies</a>
+					<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i>
                                         Logout
                                     </a>
@@ -51,9 +49,10 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                     </form>
-                                
-                    </div>
-                </div>
+				  </div>
+				</div>
+
+
                  @endif
 
       </div>

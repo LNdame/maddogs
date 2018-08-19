@@ -12,50 +12,64 @@
         <br><hr>
 
 
-
         @if(count($banks)>0)
 
-
-        <table id="datatable" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Actions</th>
-                
-            </tr>
-        </thead>
-        <tbody>
+        <div class="row">
+			<div class="col-md-10">
+				<h4>Name</h4>
+			</div>
+			
+			<div class="col-md-2">
+				<h4>Actions</h4>
+			</div>
+		</div><hr>
+        
+        
 
         @foreach($banks as $bank)
-
-            <tr>
-                <td class="col-md-9"> {{$bank->bank_name}}</td>
-                <td class="col-md-3">
-                    <a href="/banks/{{$bank->id}}" class="btn btn-success btn-sm">View</a>
-                    <a href="/banks/{{$bank->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+        
+       <div class="row">
+		   <div class="col-md-10">
+				{{$bank->bank_name}}
+		   </div> 
+		   
+		   <div class="col-md-2">
+				<div class="row">
+					<a href="/banks/{{$bank->id}}">View</a>
+				</div><br>
+				
+				<div class="row">
+					 <a href="/banks/{{$bank->id}}/edit">Edit</a>
+				</div><br>
+				
+				<div class="row">
+                   
            
                     {!!Form::open(['action' => ['BanksController@destroy', $bank->id], 'method' =>'POST' ,'class'=>'pull-right'])!!}
                             
                             {!! Form::hidden('_method', 'DELETE') !!}
                             
-                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
+                            {!! Form::submit('Delete') !!}
                     
                     {!! Form::close() !!}
+                    
+                </div><br>
 
-                </td>
-                
-            </tr>
-        
+		   </div> 
+		</div>
+		<hr>
+
+   
         
             
         @endforeach
+        
+        {{$banks->links()}}
 
-        </tbody>
-           
-        </table>
+
         @endif
 
-        {{$banks->links()}}
+        
 
 </div>
         @endsection
