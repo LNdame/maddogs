@@ -21,7 +21,7 @@
                 </div>
         <h2 class="mx-auto mb-10">Welcome to the Tsenene Capital Dashboard</h2><br>
         
-          <h3 class="mx-auto mb-5"><em>If you haven't already, start by creating your copany profile</em></h3>
+          <h3 class="mx-auto mb-5"><em>If you haven't already, start by creating your company profile</em></h3>
         <a class="btn btn-primary btn-xl" href="{{url('companies/create')}}">Create Company Profile</a>
       </div>
     </section>
