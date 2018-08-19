@@ -57,10 +57,10 @@
 				<div class="col-md-2">
 
                         <div class="row">
-							<a class="text-center"href="/companies/{{$company->id}}">View</a>
+							<a class="text-center"href="{{route('companies.show', ['company'=>$company] )}}">View</a>
 						</div><br>
                         <div class="row">
-							<a class="text-center"href="/companies/{{$company->id}}/edit">Edit</a>
+							<a class="text-center"href="{{route('companies.edit', ['company'=>$company] )}}">Edit</a>
                         </div><br>
                         
                         <div class="row">

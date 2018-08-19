@@ -25,7 +25,7 @@
 
       
 
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-6 mb-4">
           <div class="card h-100">
             <h4 class="card-header">Pre Due and Due Diligence</h4>
             <div class="card-body">
@@ -40,11 +40,11 @@
                   </p>
             </div>
             <div class="card-footer">
-              <a href="{{url('/contact')}}" class="btn btn-primary">Learn More</a>
+              <a href="{{url('/contact')}}" class="btn btn-secondary">Learn More</a>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-6 mb-4">
           <div class="card h-100">
             <h4 class="card-header">Enterprise Development</h4>
             <div class="card-body">
@@ -57,12 +57,25 @@
                             </ul>
                 </p>
             </div>
+            
+
+
+
+
             <div class="card-footer">
-              <a href="{{url('/contact')}}" class="btn btn-primary">Learn More</a>
+              <a href="{{url('/contact')}}" class="btn btn-secondary">Learn More</a>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
+
+ </div>
+
+
+<div class="row">
+
+
+
+        <div class="col-lg-6 mb-4">
           <div class="card h-100">
             <h4 class="card-header">Business  <br/> Assistance </h4>
             <div class="card-body">
@@ -79,16 +92,16 @@
 
 
             <div class="card-footer">
-              <a href="{{url('/contact')}}" class="btn btn-primary">Learn More</a>
+              <a href="{{url('/contact')}}" class="btn btn-secondary">Learn More</a>
             </div>
           </div>
         </div>
-      </div>
+  
 
 
- <div class="col-lg-4 mb-4">
+        <div class="col-lg-6 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Service   <br/> For Government </h4>
+            <h4 class="card-header">Services   <br/> For Government </h4>
             <div class="card-body">
               <p class="card-text"><ul>
                   <li>Economic and SME development Consulting services<br/></li>
@@ -103,16 +116,19 @@
 
 
             <div class="card-footer">
-              <a href="{{url('/contact')}}" class="btn btn-primary">Learn More</a>
+              <a href="{{url('/contact')}}" class="btn btn-secondary">Learn More</a>
             </div>
           </div>
         </div>
-      </div>
+      
 
 
 
       <!-- /.row -->
       </div>
+
+      
+
 
     </div>
 
