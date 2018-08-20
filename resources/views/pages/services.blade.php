@@ -12,7 +12,7 @@
       <!-- Image Header -->
       <img class="img-fluid rounded mb-4" src="images/servicehd.jpeg" alt="ensemble"  style="width:100%;">
 
-       <h1 class="mb-1 text-grey centered ">Our Services <br/> What we do, is what we do best</h1>
+       <h1 class="mb-1 text-grey centered ">Our Services <br/><em> What we do, is what we do best</em> </h1>
  
     
 </div>
