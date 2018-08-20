@@ -10,7 +10,7 @@
         
 
 
-                {!! Form::open(['action' => 'UploadsController@store', 'method' =>'POST', 'enctype' =>'multipart/data']) !!}
+                {!! Form::open(['action' => 'UploadsController@store', 'method' =>'POST', 'enctype' =>'multipart/form-data']) !!}
 
                 <div class="form-group">
                         {{Form::label('has_bee_certificate', 'Do you have a BEE Certificate ? ')}}
@@ -95,11 +95,12 @@
                 </div>
 
 
-                <div class="form-group">
+                <div class="form-group col-md-offset-2 col-md-8">
                         {{Form::label('assessment_status', 'Assessment Status')}}
-                        {{Form::textarea('assessment_status','',['id'=>'article-ckeditor','class'=>'form-control','placeholder'=>'Assessment Status'])}}
+                        {{Form::select('assessment_status', array('pending' => 'pending', 'complete' => 'complete' , 'action_required' =>'action_required'))}} 
                 </div>
-
+                
+               
                 
                 {{Form::submit('Submit',['class'=>'btn btn-xl btn-dark '])}}
 

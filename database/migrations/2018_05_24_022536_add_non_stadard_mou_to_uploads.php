@@ -13,7 +13,7 @@ class AddNonStadardMouToUploads extends Migration
      */
     public function up()
     {
-        Schema::table('assessments', function($table)
+        Schema::table('uploads', function($table)
         {
              $table->string('non_standard_mou')->nullable()->after('standard_mou');
 
@@ -29,7 +29,7 @@ class AddNonStadardMouToUploads extends Migration
     public function down()
     {
 
-        Schema::table('assessments', function($table)
+        Schema::table('uploads', function($table)
         {
             $table->dropColumn('non_standard_mou');
         });  

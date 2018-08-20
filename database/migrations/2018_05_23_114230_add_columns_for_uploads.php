@@ -15,7 +15,7 @@ class AddColumnsForUploads extends Migration
     {
         //
 
-        Schema::table('assessments', function($table)
+        Schema::table('uploads', function($table)
         {
             
         
@@ -47,7 +47,7 @@ class AddColumnsForUploads extends Migration
     {
         //
 
-        Schema::table('assessments', function($table)
+        Schema::table('uploads', function($table)
             {
                 $table->dropColumn('has_bee_certificate');
                 $table->dropColumn('bee_certificate');
