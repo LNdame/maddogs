@@ -4,6 +4,9 @@
 
 <header class="masthead d-flex">
       <div class="container text-center my-auto">
+
+<img class="card-img-top img-responsive img-responsive" style="width:300px; height: 150px;" src="img/final_logo.png" alt="partner">
+
         <h1 class="mb-1 text-white ">TSENENE Capital</h1>
         <h3 class="mb-5 text-white ">
           <em>Developing, empowering and supporting start-up companies, <br/>SMME’s and entrepreneurs with visionary ideas</em>
